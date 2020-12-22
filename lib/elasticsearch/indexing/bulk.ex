@@ -53,7 +53,7 @@ defmodule Elasticsearch.Index.Bulk do
   """
   def encode!(cluster, struct, index) do
     config = Cluster.Config.get(cluster)
-    header = header(config, "create", index, struct)
+    header = header(config, "index", index, struct)
 
     document =
       struct
